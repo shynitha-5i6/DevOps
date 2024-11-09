@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baking Workshop Registration Form</title>
+    <style>
+        /* Set background image */
+        body {
+            background-image: url('bakery2.jpg'); /* Replace with the URL of your background image */
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Center the form in the middle of the screen */
+        .form-container {
+            max-width: 500px;
+            margin: 50px auto;
+            background-color: rgba(255, 255, 255, 0.9); /* Transparent white background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin: 10px 0 5px;
+            color: #555;
+        }
+
+        input[type="text"], input[type="email"], input[type="tel"], input[type="date"], textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        input[type="submit"] {
+            background-color: #ff6347; /* Tomato color */
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #e5533c;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Baking Workshop Registration</h1>
+
+        <form action="/submit_registration" method="POST">
+            <!-- Personal Information -->
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="workshopDate">Preferred Workshop Date:</label>
+            <input type="date" id="date1" name="workshopDate" value="Date 1">
+            
+            <label for="cars">Skill Level:</label>
+
+<select name="cars" id="cars">
+  <option value="volvo">Beginer</option>
+  <option value="saab">Medium</option>
+  <option value="mercedes">Advanced</option>
+</select>
+
+            <p>Workshop Fee: $100</p>
+            <label for="cars">Preferred payment method:</label>
+
+<select name="cars" id="cars">
+  <option value="volvo">Credit card</option>
+  <option value="saab">Paypal</option>
+  <option value="mercedes">Bank Transfer</option>
+
+</select>
+
+<label for="cars">How did you hear about this workshop?</label>
+
+<select name="cars" id="cars">
+  <option value="volvo">Social Media</option>
+  <option value="saab">Friends/Family</option>
+  <option value="mercedes">Website</option>
+  <option value="audi">Others</option>
+</select>
+
+            <label for="notes">Any special requests or notes?</label><br>
+            <textarea id="notes" name="notes" rows="4" cols="50"></textarea>
+
+            <input type="submit" value="Register">
+        </form>
+    </div>
+
+</body>
+</html>
